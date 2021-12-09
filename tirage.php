@@ -18,6 +18,21 @@
       
       /* max-width:25%; */
     }
+    #chat-container { background: white; display:flex;
+      bottom: 0;
+    position: fixed;
+      flex-direction:column; 
+      max-height:35%;
+      margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+#form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+#input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+#input:focus { outline: none; }
+#form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+#messages { list-style-type: none; margin: 0; padding: 0; overflow:auto}
+#messages > li { padding: 0.5rem 1rem; }
+#messages > li:nth-child(odd) { background: #efefef; }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Document</title>
@@ -63,5 +78,19 @@ $_SESSION["name"]=$USERNAME;
       </div>
     </div>
     <?php endif ?>
+    <style>
+     
+    </style>
+<div id="chat-container">
+<ul id="messages"></ul>
+    <div id="input-container">
+    <form id="form" action="">
+      <input id="input" autocomplete="off" /><button>Send</button>
+      <?php echo '<input disabled  id="sender" type="text" value="'.$USERNAME.'">'?>
+    </form>
+    </div>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="http://localhost:3000/client.js"></script>
+</div>
 <body>
 </html>
