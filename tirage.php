@@ -89,8 +89,8 @@ $_SESSION["name"]=$USERNAME;
       <?php echo '<input disabled  id="sender" type="text" value="'.$USERNAME.'">'?>
     </form>
     </div>
-    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
-    <script src="http://localhost:3000/client.js"></script>
+    <script src="http://51.210.254.169:3000/socket.io/socket.io.js"></script>
+    <script src="http://51.210.254.169:3000/client.js"></script>
 </div>
 <body>
 </html>

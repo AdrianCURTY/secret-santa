@@ -14,4 +14,4 @@ echo '</br>';
 var_dump($changeNbr);
 $_SESSION["connected"]=true;
 $server_host=$_SERVER['SERVER_ADDR'];
-header('Location: http://'.$server_host.'/secret-santa/tirage.php');
+header('Location: http://'.$server_host.'/tirage.php');
